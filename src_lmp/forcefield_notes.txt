@@ -1,0 +1,13 @@
+LAMMPS units real; atom_style full; pair_style lj/cut/coul/long
+TIP3P water is rigid via fix shake, geometry from supplied SETTLE.
+TBF RB dihedrals converted exactly (up to a constant) to OPLS style.
+Geometric mixing (OPLS combination rule 3).
+special_bonds lj/coul 0 0 0.5; explicit TBF [pairs] checked against graph.
+Water LJ values read from ffnonbonded.itp (inside archive).
+OW sigma_nm=(0.315061, 0.636386)
+HW sigma_nm=(0.1, 0.0)
+HTB sigma_nm / epsilon_kJ = (0.25, 0.12552)
+Data file contains x y z nx ny nz for each atom; MIC-based bond graph
+unwrapping ensures molecules are contiguous when image flags are applied.
+PDB writes whole-molecule coordinates (some may lie outside CRYST1).
+Validate force-field energies against reference GROMACS before production.
